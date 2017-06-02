@@ -1,2 +1,2 @@
 # CoolKids
-![](VhlQK.gif)
+![](us.jpg)
