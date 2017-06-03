@@ -2,7 +2,9 @@
 
 var action, url, survey, users;
 var index = 0,
-    success = 0;
+    success = 0,
+    u = [],
+    a = [];
 
 // RUN -----------------------------------------------------------------------------------------------------------------
 
@@ -70,44 +72,108 @@ function displaySuccess(success) {
 
 // ANALYZE -------------------------------------------------------------------------------------------------------------
 
-function splitAnswers(answers){
-  return (""+answers).split("");
+function splitAnswers(answers) {
+    return ("" + answers).split("").map(Number);
 }
 
-function displayUsers(users){
-  for (i = 0; i < users.length; i++ ){
-    var userholder = document.getElementsByClassName(userholder);
-    userholder.innerHTML = ""
-  }
-}
+function displayUsers(users) {
+    for (i = 0; i < users.length; i++) {
+        var userholder = document.getElementsByClassName("userholder")[0];
 
-function generateUsers(){
-  var u = [];
-  for (j = 0; j < users.users.length; j++){
-    var user = [];
-    user[0] = splitAnswers(users.users[j].answer);
-    user[1] = matchRate(user[0]);
-    u.push(user);
-  }
-  u.sort(function(a,b){
-    return parseFloat(b[1]) - parseFloat(a[1]);
-  });
-  displayUsers(u);
-}
+        var tr = document.createElement("tr");
+        var td0 = document.createElement("td");
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var h50 = document.createElement("h5");
+        var h51 = document.createElement("h5");
+        var btn = document.createElement("button");
+        btn.className = "button-primary";
+        btn.innerHTML = "Select";
+        btn.onclick = function () {
+            query(this);
+        };
+        btn.value = i;
+        if (i === 0) query(btn);
 
-function matchRate(answers){
-  for (i = 0;i < answers.length; i++){
-    if (i === answers.length - 1) {
-        success = 100 - (success / answers.length);
+        h50.innerHTML = i;
+        h51.innerHTML = users[i][1] + " %";
+
+        td0.appendChild(h50);
+        td1.appendChild(h51);
+        td2.appendChild(btn);
+
+        tr.appendChild(td0);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+
+        userholder.appendChild(tr);
     }
-    else {
-        var x = answers[i];
-        var y = survey.qs[i].a;
-        var z = Math.abs(x - y);
-        success += (z * 20);
+
+}
+
+function generateUsers() {
+    for (i = 0; i < survey.qs.length; i++) {
+        a.push(survey.qs[i].a);
+    }
+    for (j = 0; j < users.users.length; j++) {
+        var user = [];
+        user[0] = splitAnswers(users.users[j].answer);
+        user[1] = matchRate(user[0]);
+        u.push(user);
+    }
+    u.sort(function (a, b) {
+        return parseFloat(b[1]) - parseFloat(a[1]);
+    });
+    displayUsers(u);
+}
+
+function matchRate(answers) {
+    for (i = 0; i < answers.length; i++) {
+        if (i === answers.length - 1) {
+            success = 100 - (success / answers.length);
+        }
+        else {
+            var x = answers[i];
+            var y = survey.qs[i].a;
+            var z = Math.abs(x - y);
+            success += (z * 20);
         }
     }
-    return success;
+    return Math.round(success);
+}
+
+function query(index) {
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"],
+            datasets: [{
+                label: "Employee",
+                data: u[index.value][0],
+                backgroundColor: 'rgba(231, 76, 60, 0.5)'
+            }, {
+                label: "Employer/Peer-review",
+                data: a,
+                backgroundColor: 'rgba(52, 152, 219, 0.5)'
+            }]
+
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 5,
+                        suggestedMin: 0,
+                        suggestedMax: 5,
+                        stepSize: 1
+                    }
+                }]
+            }
+        }
+    });
+
 }
 
 // JSON ----------------------------------------------------------------------------------------------------------------
