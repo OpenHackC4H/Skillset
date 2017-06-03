@@ -93,6 +93,7 @@ function generateUsers(){
     return parseFloat(b[1]) - parseFloat(a[1]);
   });
   displayUsers(u);
+  console.log(u);
 }
 
 function matchRate(answers){
