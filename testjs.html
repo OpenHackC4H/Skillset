@@ -37,40 +37,43 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="offset-by-two eight columns" style="margin-top: 5%">
+      <div class="offset-by-two eight columns center" style="margin-top: 5%">
+
         <h4>Question:</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non accumsan ex. Proin eu leo nec massa gravida vestibulum. Morbi posuere porta lacus, ut congue lectus mollis a. Suspendisse nisl mauris, fringilla at eros a, mattis viverra purus. Mauris maximus enim at sapien dignissim cursus. </p>
-        <form action="">
+        <p class="question"> </p>
           <div class="offset-by-two two columns center">
+            <form Action="">
             <p> AGREE </p>
-            <input type="radio" name="q0" value="1">
+            <input type="radio" class="radiobutton" name="r0" value="0">
           </div>
 
           <div class="two columns center">
             <p> - </p>
-            <input type="radio" name="q0" value="2">
+            <input type="radio" class="radiobutton" name="r0" value="1">
           </div>
 
           <div class="two columns center">
             <p> - </p>
-            <input type="radio" name="q0" value="3">
+            <input type="radio" class="radiobutton" name="r0" value="2">
           </div>
 
           <div class="two columns center">
             <p> - </p>
-            <input type="radio" name="q0" value="4">
+            <input type="radio" class="radiobutton" name="r0" value="3">
           </div>
 
           <div class="two columns center">
             <p> DISAGREE </p>
-            <input type="radio" name="q0" value="5">
+            <input type="radio" class="radiobutton" name="r0" value="4">
           </div>
         </form>
 
+
+
         <div class="row" style="margin-top: 10%">
             <div class="offset-by-four four columns center">
-              <button class="button-primary" type="submit" onclick="saveRadio();"> submit </button>
-              <button class="button-primary" type="submit" onclick="loadRadio();"> loadit </button>
+              <button class="button-primary" type="submit" onclick="next();"> Next</button>
+              <!-- <button class="button-primary" type="submit" onclick="loadRadio();"> loadit </button> -->
           </div>
         </div>
       </div>
