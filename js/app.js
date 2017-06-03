@@ -17,6 +17,7 @@ function run() {
             break;
         case 1:
             // ANALYZE
+            generateUsers();
             break;
         default:
             break;
@@ -68,6 +69,46 @@ function displaySuccess(success) {
 }
 
 // ANALYZE -------------------------------------------------------------------------------------------------------------
+
+function splitAnswers(answers){
+  return (""+answers).split("");
+}
+
+function displayUsers(users){
+  for (i = 0; i < users.length; i++ ){
+    var userholder = document.getElementsByClassName(userholder);
+    userholder.innerHTML = ""
+  }
+}
+
+function generateUsers(){
+  var u = [];
+  for (j = 0; j < users.users.length; j++){
+    var user = [];
+    user[0] = splitAnswers(users.users[j].answer);
+    user[1] = matchRate(user[0]);
+    u.push(user);
+  }
+  u.sort(function(a,b){
+    return parseFloat(b[1]) - parseFloat(a[1]);
+  });
+  displayUsers(u);
+}
+
+function matchRate(answers){
+  for (i = 0;i < answers.length; i++){
+    if (i === answers.length - 1) {
+        success = 100 - (success / answers.length);
+    }
+    else {
+        var x = answers[i];
+        var y = survey.qs[i].a;
+        var z = Math.abs(x - y);
+        success += (z * 20);
+        }
+    }
+    return success;
+}
 
 // JSON ----------------------------------------------------------------------------------------------------------------
 
