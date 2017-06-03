@@ -158,9 +158,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: black; }
 a:hover {
-  color: #0FA0CE; }
+  color: black; }
 
 
 /* Buttons
@@ -396,6 +396,11 @@ hr {
   max-width: 250px;
 }
 
+.process{
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
