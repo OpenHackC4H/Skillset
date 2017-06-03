@@ -93,9 +93,10 @@ function displayUsers(users) {
             query(this);
         };
         btn.value = i;
+        if (i === 0) query(btn);
 
         h50.innerHTML = i;
-        h51.innerHTML = users[i][1];
+        h51.innerHTML = users[i][1] + " %";
 
         td0.appendChild(h50);
         td1.appendChild(h51);
@@ -107,6 +108,7 @@ function displayUsers(users) {
 
         userholder.appendChild(tr);
     }
+
 }
 
 function generateUsers() {
@@ -141,7 +143,6 @@ function matchRate(answers) {
 }
 
 function query(index) {
-    console.log(u[index.value][0]);
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'line',
