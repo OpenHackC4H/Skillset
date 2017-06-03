@@ -110,6 +110,9 @@ function displayUsers(users) {
 }
 
 function generateUsers() {
+    for (i = 0; i < survey.qs.length; i++) {
+        a.push(survey.qs[i].a);
+    }
     for (j = 0; j < users.users.length; j++) {
         var user = [];
         user[0] = splitAnswers(users.users[j].answer);
@@ -130,7 +133,6 @@ function matchRate(answers) {
         else {
             var x = answers[i];
             var y = survey.qs[i].a;
-            a.push(y);
             var z = Math.abs(x - y);
             success += (z * 20);
         }
@@ -139,119 +141,32 @@ function matchRate(answers) {
 }
 
 function query(index) {
+    console.log(u[index.value][0]);
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"],
             datasets: [{
-                label: 'Worker',
+                label: "Employee",
                 data: u[index.value][0],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 99, 132, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(255,99,132,1)'
-                ],
-                borderWidth: 1
-            },
-                {
-                    label: 'Employer',
-                    data: a,
-                    backgroundColor: [
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)',
-                        'rgba(55, 99, 132, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)',
-                        'rgba(55,99,132,1)'
-                    ],
-                    borderWidth: 1
-                }],
+                backgroundColor: 'rgba(231, 76, 60, 0.5)'
+            }, {
+                label: "Employer/Peer-review",
+                data: a,
+                backgroundColor: 'rgba(52, 152, 219, 0.5)'
+            }]
+
         },
         options: {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        min: 0,
+                        max: 5,
+                        suggestedMin: 0,
+                        suggestedMax: 5,
+                        stepSize: 1
                     }
                 }]
             }
