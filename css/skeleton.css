@@ -368,8 +368,8 @@ input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
     color: #FFF;
     border: 0;
-    background-color: #ff845d;
-    border-color: #ff845d;
+    background-color: #FE642E;
+    border-color: #FE642E;
 }
 
 /* Forms
