@@ -21,13 +21,14 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/test.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <SCRIPT SRC="test.js">
-  </SCRIPT>
+  <SCRIPT SRC="js/test.js">
+</SCRIPT>
 
 </head>
 <body>
@@ -36,25 +37,48 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="offset-by-two eight columns" style="margin-top: 25%">
-        <h4>Questions</h4>
+      <div class="offset-by-two eight columns" style="margin-top: 10%">
+        <h4>Question:</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non accumsan ex. Proin eu leo nec massa gravida vestibulum. Morbi posuere porta lacus, ut congue lectus mollis a. Suspendisse nisl mauris, fringilla at eros a, mattis viverra purus. Mauris maximus enim at sapien dignissim cursus. </p>
         <form action="">
-          <input type="radio" name="q0" value="0"> Yes <br>
-          <input type="radio" name="q0" value="1"> Maybe <br>
-          <input type="radio" name="q0" value="2"> No
+          <div class="four columns">
+            <input type="radio" name="q0" value="0"> Yes
+          </div>
+
+          <div class="four columns">
+            <input type="radio" name="q0" value="0"> Maybe <br>
+          </div>
+
+          <div class="four columns">
+            <input type="radio" name="q0" value="0"> No <br>
+          </div>
         </form>
 
-        <h4>Questions</h4>
+        <div class="row" style="margin-top: 25%">
+
+        <h4>Question:</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non accumsan ex. Proin eu leo nec massa gravida vestibulum. Morbi posuere porta lacus, ut congue lectus mollis a. Suspendisse nisl mauris, fringilla at eros a, mattis viverra purus. Mauris maximus enim at sapien dignissim cursus. </p>
         <form action="">
-          <input type="radio" name="q1" value="0"> Yes <br>
-          <input type="radio" name="q1" value="1"> Maybe <br>
-          <input type="radio" name="q1" value="2"> No
+          <div class="four columns">
+            <input type="radio" name="q1" value="0"> Yes
+          </div>
+
+          <div class="four columns">
+            <input type="radio" name="q1" value="0"> Maybe <br>
+          </div>
+
+          <div class="four columns">
+            <input type="radio" name="q1" value="0"> No <br>
+          </div>
         </form>
-        <button class="button-primary" type="submit" onclick="saveRadio();"> submit </button>
-          <button class="button-primary" type="submit" onclick="loadRadio();"> submit </button>
+        <div class="row" style="margin-top: 25%">
+            <div class="offset-by-two eight columns">
+              <button class="button-primary" type="submit" onclick="saveRadio();"> submit </button>
+              <button class="button-primary" type="submit" onclick="loadRadio();"> loadit </button>
+          </div>
+        </div>
       </div>
+    </row>
     </div>
   </div>
 
