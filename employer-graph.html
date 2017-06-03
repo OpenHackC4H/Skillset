@@ -26,6 +26,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <SCRIPT SRC ="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></SCRIPT>
+
+
 </head>
 <body>
 
@@ -33,37 +36,39 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="offset-by-two eight columns" style="margin-top: 5%; text-align:center;">
-        <a href="index.html"><img class="logo" src="images/logo.svg"></a>
-      </div>
-      <div class="offset-by-one ten columns" style="margin-top: 5%; margin-bottom:5%; text-align:left;">
-        <h4>Anders Persson</h4>
-        <p>Skills:</p>
-        <ul>
-          <li>Java</li>
-          <li>Python</li>
-          <li>C#</li>
-        </ul>
-        <p>Personal info:</p>
-        <ul>
-          <li>Master in Computer Science</li>
-          <li></li>
-          <li></li>
-        </ul>
+      <div class="offset-by-two eight columns" style="margin-top: 10%; text-align:center;">
+
+        <canvas id="myChart" width="400" height="200"></canvas>
+        <SCRIPT SRC ="js/chart.js"></SCRIPT>
       </div>
     </div>
-  </div>
+    <div class="row">
+        <div class ="offset-by-two eight columns">
 
-  <div class="offset-by-two five columns" style="text-align:left;">
-    <h5>Companies interested in you</h5>
-    <a class="process"><p>Tech Team AB</p></a>
-    <a class="process"><p>Hardworkers</p></a>
-  </div>
-  <div class="five columns" style="text-align:left; margin-bottom:5%;">
-    <h5>Employers</h5>
-    <p>Employers in Sweden: 200 companies</p>
-    <p>Employers in your line of work: 45 companies</p>
-    <p>Employers in your area: 42 companies</p>
+          <table class="u-full-width">
+          <thead>
+            <tr>
+              <th style="text-align: center">ID</th>
+              <th style="text-align: center">Procentuell Match</th>
+              <th style="text-align: center">Show Chart</th>
+            </tr>
+          </thead>
+          <tbody class="userholder">
+            <tr>
+              <td><h5 style="text-align: center; margin: auto">#1121</h5></td>
+              <td><h5 style="text-align: center; margin: auto">72%</h5></td>
+              <td style="text-align: center"><button class="button-primary">Select</button></td>
+            </tr>
+            <tr>
+              <td><h5 style="text-align: center; margin: auto">#1211</h5></td>
+              <td><h5 style="text-align: center; margin: auto">53%</h5></td>
+              <td style="text-align: center"><button class="button-primary">Select</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
   </div>
 
 <!-- End Document
