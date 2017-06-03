@@ -34,7 +34,7 @@
       "name": "Jasmin Andersson",
       "age": 31,
       "answer": 1234012340123401234
-    }
+    },
     {
       "name": "Sven Larsson",
       "age": 22,
@@ -185,6 +185,5 @@
       "age": 30,
       "answer": 1234012340123401234
     }
-
   ]
 }
