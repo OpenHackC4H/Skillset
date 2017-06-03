@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="649100ce-8ba7-4a1a-bf78-a61a689a4598" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/companies.html" afterPath="$PROJECT_DIR$/companies.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/normalize.css" afterPath="$PROJECT_DIR$/css/normalize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/skeleton.css" afterPath="$PROJECT_DIR$/css/skeleton.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/employee.html" afterPath="$PROJECT_DIR$/employee.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/employer.html" afterPath="$PROJECT_DIR$/employer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/8012 [Converted].eps.svg" afterPath="$PROJECT_DIR$/images/8012 [Converted].eps.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/logo.svg" afterPath="$PROJECT_DIR$/images/logo.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login-employee.html" afterPath="$PROJECT_DIR$/login-employee.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login-employer.html" afterPath="$PROJECT_DIR$/login-employer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey.html" afterPath="$PROJECT_DIR$/survey.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/users.json" afterPath="$PROJECT_DIR$/js/users.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login-employer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login-employer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login-employer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/users.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -162,11 +152,11 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/chart.js" />
         <option value="$PROJECT_DIR$/js/survey.json" />
-        <option value="$PROJECT_DIR$/js/users.json" />
         <option value="$PROJECT_DIR$/css/skeleton.css" />
         <option value="$PROJECT_DIR$/employer-graph.html" />
         <option value="$PROJECT_DIR$/employer.html" />
         <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/js/users.json" />
       </list>
     </option>
   </component>
@@ -352,12 +342,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496497256265</updated>
-      <workItem from="1496497258367" duration="14300000" />
+      <workItem from="1496497258367" duration="14590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14300000" />
+    <option name="totallyTimeSpent" value="14590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="42" width="1400" height="784" extended-state="0" />
@@ -471,14 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/survey.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1063">
@@ -543,8 +525,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login-employer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
           <folding />
         </state>
       </provider>
