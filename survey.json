@@ -1,0 +1,88 @@
+{
+  "qs": [
+    {
+      "q": "You find it difficult to introduce yourself to other people.",
+      "a": 2
+    },
+    {
+      "q": "You often get so lost in thoughts that you ignore or forget your surroundings.",
+      "a": 4
+    },
+    {
+      "q": "You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.",
+      "a": 4
+    },
+    {
+      "q": "You find it easy to stay relaxed and focused even when there is some pressure.",
+      "a": 3
+    },
+    {
+      "q": "You do not usually initiate conversations.",
+      "a": 4
+    },
+    {
+      "q": "You rarely do something just out of sheer curiosity.",
+      "a": 4
+    },
+    {
+      "q": "You feel superior to other people.",
+      "a": 0
+    },
+    {
+      "q": "Being organized is more important to you than being adaptable.",
+      "a": 2
+    },
+    {
+      "q": "You are usually highly motivated and energetic.",
+      "a": 4
+    },
+    {
+      "q": "Winning a debate matters less to you than making sure no one gets upset.",
+      "a": 4
+    },
+    {
+      "q": "You often feel as if you have to justify yourself to other people.",
+      "a": 4
+    },
+    {
+      "q": "Your home and work environments are quite tidy.",
+      "a": 4
+    },
+    {
+      "q": "You do not mind being at the center of attention.",
+      "a": 2
+    },
+    {
+      "q": "You consider yourself more practical than creative.",
+      "a": 3
+    },
+    {
+      "q": "People can rarely upset you.",
+      "a": 2
+    },
+    {
+      "q": "Your travel plans are usually well thought out.",
+      "a": 4
+    },
+    {
+      "q": "It is often difficult for you to relate to other people’s feelings.",
+      "a": 2
+    },
+    {
+      "q": "Your mood can change very quickly.",
+      "a": 4
+    },
+    {
+      "q": "In a discussion, truth should be more important than people’s sensitivities.",
+      "a": 0
+    },
+    {
+      "q": "You rarely worry about how your actions affect other people.",
+      "a": 4
+    },
+    {
+      "q": "Your work style is closer to random energy spikes than to a methodical and organized approach.",
+      "a": 1
+    }
+  ]
+}
