@@ -1,6 +1,7 @@
 var aq = 3
 var amountQuest = 2
-var questions = []
+var questions =  []
+
 
 
 function saveRadio() {
@@ -13,13 +14,22 @@ function saveRadio() {
       for (i = 0, len = aq ; i < len; i++ ){
         if (q1[i].checked) {
 
-          alert("Question nr: " + i)
+          var quest = { nr: j, checked: i};
+
+          questions.push(quest)
+          alert("You answered: " + questions[j].nr + ", with a " + i)
+          localStorage.setItem("q" + j.toString(), JSON.stringify(questions[j].checked));
 
         }
     }
   }
-
-
 }
 
-function loadRadio() {}
+function loadRadio() {
+  var questLog = []
+  for (var i = 0; i < amountQuest ; i++) {
+    questLog.push(localStorage.getItem("q" + i.toString()))
+
+    alert(questLog[i])
+  }
+}
