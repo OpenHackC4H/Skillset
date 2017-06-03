@@ -80,7 +80,7 @@ function fetchSurvey() {
 }
 
 function fetchUsers() {
-    url = "js/survey.json";
+    url = "js/users.json";
     loadJSON(function (response) {
         users = JSON.parse(response);
         run();

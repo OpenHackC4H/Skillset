@@ -1,3 +1,3 @@
 # CoolKids
-![](us.jpg)
-![](logo-draft1.png)
+![](images/us.jpg)
+![](images/logo-draft1.png)
