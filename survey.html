@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Your page title here :)</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!--<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">-->
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/testjs.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script src="js/app.js">
+    </script>
+    <script>
+        setAction(0);
+    </script>
+
+</head>
+<body>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+    <div class="row">
+        <div class="offset-by-two eight columns center" style="margin-top: 5%">
+            <form action="">
+
+                <h4>Question:</h4>
+                <p class="question"></p>
+
+                <div class="offset-by-two two columns center">
+                    <p> AGREE </p>
+                    <input type="radio" class="radiobutton" name="r0" value="0">
+                </div>
+
+                <div class="two columns center">
+                    <p> - </p>
+                    <input type="radio" class="radiobutton" name="r0" value="1">
+                </div>
+
+                <div class="two columns center">
+                    <p> - </p>
+                    <input type="radio" class="radiobutton" name="r0" value="2">
+                </div>
+
+                <div class="two columns center">
+                    <p> - </p>
+                    <input type="radio" class="radiobutton" name="r0" value="3">
+                </div>
+
+                <div class="two columns center">
+                    <p> DISAGREE </p>
+                    <input type="radio" class="radiobutton" name="r0" value="4">
+                </div>
+
+            </form>
+
+            <div class="row btn" style="margin-top: 10%">
+                <div class="offset-by-four four columns center">
+                    <button class="button-primary" type="submit" onclick="nextQuestion();"> Next</button>
+                </div>
+            </div>
+
+            <div class="background">
+                <h4 class="display"></h4>
+            </div>
+        </div>
+        </row>
+    </div>
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
