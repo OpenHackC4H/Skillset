@@ -14,11 +14,11 @@ function saveRadio() {
       for (i = 0, len = aq ; i < len; i++ ){
         if (q1[i].checked) {
 
-          var quest = { nr: j, checked: i};
+          var quest = { nr: j, checked: q1[i].value};
 
           questions.push(quest)
-          alert("You answered: " + questions[j].nr + ", with a " + i)
-          localStorage.setItem("q" + j.toString(), JSON.stringify(questions[j].checked));
+          alert("You answered: " + questions[j].nr + ", with a " + q1[i].value)
+          localStorage.setItem("q" + j.toString(), JSON.stringify(quest));
 
         }
     }
@@ -28,8 +28,8 @@ function saveRadio() {
 function loadRadio() {
   var questLog = []
   for (var i = 0; i < amountQuest ; i++) {
-    questLog.push(localStorage.getItem("q" + i.toString()))
+    questLog.push(JSON.parse(localStorage.getItem("q" + i.toString())))
 
-    alert(questLog[i])
+    alert("You answered: " + questLog[i].nr + ", with a " + q1[i].value)
   }
 }
