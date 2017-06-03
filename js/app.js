@@ -81,14 +81,21 @@ function displayUsers(users) {
         var userholder = document.getElementsByClassName("userholder")[0];
 
         var tr = document.createElement("tr");
+
         var td0 = document.createElement("td");
         var td1 = document.createElement("td");
         var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+
         var h50 = document.createElement("h5");
         var h51 = document.createElement("h5");
+
+        var ipt = document.createElement("input");
+        ipt.type = "checkbox";
+
         var btn = document.createElement("button");
         btn.className = "button-primary";
-        btn.innerHTML = "Select";
+        btn.innerHTML = "Show stats";
         btn.onclick = function () {
             query(this);
         };
@@ -101,10 +108,12 @@ function displayUsers(users) {
         td0.appendChild(h50);
         td1.appendChild(h51);
         td2.appendChild(btn);
+        td3.appendChild(ipt);
 
         tr.appendChild(td0);
         tr.appendChild(td1);
         tr.appendChild(td2);
+        tr.appendChild(td3);
 
         userholder.appendChild(tr);
     }
