@@ -47,6 +47,7 @@ function nextQuestion() {
                 var y = survey.qs[index].a;
                 var z = Math.abs(x - y);
                 success += (z * 20);
+                radio[i].checked = false;
             }
         }
         index++;
